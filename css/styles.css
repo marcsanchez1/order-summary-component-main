@@ -1,0 +1,149 @@
+:root {
+  /* Primary Colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* Neutral Colors */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--pale-blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  text-align: center;
+  max-width: 90%;
+}
+
+.hero-img img {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.content-container {
+  margin: 1.5rem;
+}
+
+#plan {
+  display: flex;
+  padding: 1.5rem;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  width: 85%;
+  margin: auto;
+  color: var(--desaturated-blue);
+}
+
+#plan {
+  background-color: var(--very-pale-blue);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+#plan .plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#plan .plan .plan-description {
+  margin-left: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+#plan .plan .plan-description p:first-child {
+  /* font-weight: 700; */
+}
+
+#plan .plan .plan-description p:last-child {
+  color: var(--desaturated-blue);
+}
+
+#plan .update-plan a {
+  font-size: 0.875rem;
+  font-weight: 700;
+  /* color: var(--dark-blue); */
+}
+
+button#payment {
+  background-color: var(--bright-blue);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 25px 10px hsla(223, 47%, 23%, 30%);
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+button#payment:hover {
+  background-color: var(--bright-blue);
+  opacity: 0.5;
+}
+
+#cancel-order {
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+}
+
+#cancel-order:hover {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg") no-repeat;
+    background-position: top;
+  }
+
+  .container {
+    width: 400px;
+  }
+
+  .content-container {
+    margin: 2.5rem;
+  }
+
+  #cancel-order {
+    font-size: 0.875rem;
+  }
+}
